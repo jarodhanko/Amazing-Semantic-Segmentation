@@ -1,0 +1,15 @@
+*CamVid*
+amazing_semantic_segmentation/roadcrack*
+amazing_semantic_segmentation/checkpoints
+amazing_semantic_segmentation/dist
+*.zip
+virtualenv
+*.egg-info
+dist
+__pycache__
+.DS_Store
+amazing_semantic_segmentation/predict
+checkpoints
+build
+predictions
+

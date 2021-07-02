@@ -1,0 +1,6 @@
+numpy
+scipy
+opencv-python
+pillow
+tensorflow==2.3.0
+sklearn

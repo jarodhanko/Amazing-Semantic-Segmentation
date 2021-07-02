@@ -38,7 +38,7 @@ class DataIterator(Iterator):
         super(DataIterator, self).__init__(num_images, batch_size, shuffle, seed)
 
     def _get_batches_of_transformed_samples(self, index_array):
-        batch_x = np.zeros(shape=(len(index_array),) + self.target_size + (3,))
+        batch_x = np.zeros(shape=(len(index_array),) + self.target_size) # + (3,)
         batch_y = np.zeros(shape=(len(index_array),) + self.target_size + (self.num_classes,))
 
         for i, idx in enumerate(index_array):

@@ -81,7 +81,7 @@ else:
 
 # get color info
 if args.csv_file is None:
-    csv_file = os.path.join('CamVid', 'class_dict.csv')
+    csv_file = os.path.join('roadcrack3', 'class_dict.csv')
 else:
     csv_file = args.csv_file
 

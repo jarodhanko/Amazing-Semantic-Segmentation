@@ -36,7 +36,7 @@ class UNet(Network):
 
         if inputs is None:
             assert isinstance(input_size, tuple)
-            inputs = layers.Input(shape=input_size + (3,))
+            inputs = layers.Input(shape=input_size + (1,)) #3
         return self._unet(inputs)
 
     def _conv_bn_relu(self, x, filters, kernel_size=1, strides=1):

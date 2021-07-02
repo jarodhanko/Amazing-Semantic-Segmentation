@@ -1,0 +1,11 @@
+/checkpoints
+/base_models/__pycache__
+roadcrack3/*
+roadcrack4/*
+roadcrack5/*
+roadcrack6/*
+weights/*.h5
+virtualenv
+predictions
+*__pycache__*
+*.zip

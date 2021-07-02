@@ -18,6 +18,7 @@ from builders import builder
 import tensorflow as tf
 import argparse
 import os
+import time
 
 
 def str2bool(v):
@@ -200,11 +201,12 @@ net.fit_generator(train_generator,
                   validation_data=valid_generator,
                   validation_steps=validation_steps,
                   validation_freq=args.validation_freq,
-                  max_queue_size=10,
+                  max_queue_size=5,
                   workers=os.cpu_count(),
                   use_multiprocessing=False,
                   initial_epoch=args.initial_epoch)
 
 # save weights
+timestr = time.strftime("%H%M")
 net.save(filepath=os.path.join(
-    paths['weights_path'], '{model}_based_on_{base_model}.h5'.format(model=args.model, base_model=base_model)))
+    paths['weights_path'], '{model}_{base_model}_{timestr}_{epochs}_{batch}.h5'.format(model=args.model, base_model=base_model, timestr=timestr, epochs=args.num_epochs, batch=args.batch_size)))
